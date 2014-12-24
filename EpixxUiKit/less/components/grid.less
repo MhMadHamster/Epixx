@@ -1,0 +1,44 @@
+.generate-columns(@n, @i: 1) when (@i =< @n) { // Условие выполнения!
+// @n — количество колонок
+// @i — внутренний счетчик от 1 до @n
+// Собственно, генерация
+	.col-@{i} {
+		width: ((@i * (100% - (@n/@i * 2 - 2))) / @n);
+		float: left;
+		margin: 0 1%;
+	}
+
+// Рекурсовный самовызов с цвеличенным на 1 счетчиком
+	.generate-columns(@n, (@i + 1));
+}
+
+// Вызываем примесь
+.generate-columns(12);
+
+[class*=col-]:first-of-type { margin-left: 0; }
+[class*=col-]:last-of-type { margin-right: 0; }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 30px;
+	background-color: @bg-color;
+}
+
+.row {
+	overflow: hidden;
+}
+
+.grid {
+	padding: 20px 0;
+}
+
+[class*=col-] *:first-child {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+[class*=col-] *:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}

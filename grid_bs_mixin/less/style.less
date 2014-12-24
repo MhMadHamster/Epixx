@@ -1,0 +1,24 @@
+@import "variables.less";
+@import "bootstrap/clearfix.less";
+@import "bootstrap/grid.less";
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  .make-row();
+  .clearfix();
+  border: 1px solid #000;
+}
+
+.main {
+  .make-xs-column(8);
+  border: 1px solid #000;
+}
+
+.sidebar {
+  .make-xs-column(3);
+  .make-xs-column-offset(1);
+  border: 1px solid #000;
+}
