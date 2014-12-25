@@ -3,6 +3,34 @@
   width: 960px;
   margin: 0 auto;
   padding: 50px 0;
+  border-radius: 15px;
+}
+.magic {
+  box-shadow: 0 0 0px 0px #cf0, 0 0 50px 10px #390;
+  -webkit-animation: magic 3s ease-out infinite;
+          animation: magic 3s ease-out infinite;
+}
+@-webkit-keyframes magic {
+  0% {
+    box-shadow: 0 0 0px 0px #cf0, 0 0 50px 10px #390;
+  }
+  50% {
+    box-shadow: 0 0 50px 30px #cf0, 0 0 50px 100px #390;
+  }
+  100% {
+    box-shadow: 0 0 0px 0px #cf0, 0 0 50px 10px #390;
+  }
+}
+@keyframes magic {
+  0% {
+    box-shadow: 0 0 0px 0px #cf0, 0 0 50px 10px #390;
+  }
+  50% {
+    box-shadow: 0 0 50px 30px #cf0, 0 0 50px 100px #390;
+  }
+  100% {
+    box-shadow: 0 0 0px 0px #cf0, 0 0 50px 10px #390;
+  }
 }
 .main-form {
   margin: 50px auto;
