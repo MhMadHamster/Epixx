@@ -1,0 +1,81 @@
+.wrapper {
+  background-color: #f0f2f5;
+  width: 960px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.main-form {
+  margin: 50px auto;
+  width: 50%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+}
+body:not(#checkSup) .checkbox {
+  display: none;
+}
+body:not(#checkSup) .checkbox + .switch .switch-checked {
+  visibility: hidden;
+}
+body:not(#checkSup) .checkbox + .switch .switch-unchecked {
+  visibility: visible;
+}
+body:not(#checkSup) .checkbox + .switch:after {
+  left: 1.5px;
+}
+body:not(#checkSup) .checkbox + .switch:before {
+  background-color: #eaeaea;
+}
+body:not(#checkSup) .checkbox:checked + .switch .switch-checked {
+  visibility: visible;
+}
+body:not(#checkSup) .checkbox:checked + .switch .switch-unchecked {
+  visibility: hidden;
+}
+body:not(#checkSup) .checkbox:checked + .switch:after {
+  left: 17.5px;
+}
+body:not(#checkSup) .checkbox:checked + .switch:before {
+  background-color: #addf7a;
+}
+body:not(#checkSup) .switch {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 30px;
+  cursor: pointer;
+}
+body:not(#checkSup) .switch [class*="switch-"] {
+  font-size: 20px;
+  color: #777;
+  font-family: Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  line-height: 30px;
+}
+body:not(#checkSup) .switch:hover [class*="switch-"] {
+  color: #333;
+}
+body:not(#checkSup) .switch:after,
+body:not(#checkSup) .switch:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  transition: all .2s;
+}
+body:not(#checkSup) .switch:before {
+  width: 40px;
+  height: 25px;
+  background-color: #eaeaea;
+  border-radius: 15px;
+}
+body:not(#checkSup) .switch:after {
+  top: 4.5px;
+  left: 1.5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}

@@ -1,0 +1,102 @@
+@import "variables.less";
+
+.wrapper {
+  background-color: @bg-color;
+  width: 960px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.main-form {
+  margin: 50px auto;
+  width: 50%;
+  background-color: @white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+body:not(#checkSup) {
+
+  .checkbox {
+    display: none;
+
+    & + .switch {
+      & .switch-checked {
+        visibility: hidden;
+      }
+      & .switch-unchecked {
+        visibility: visible;
+      }
+      &:after {
+        left: 1.5px;
+      }
+      &:before {
+        background-color: @light-grey;
+      }
+    }
+
+    &:checked + .switch {
+      & .switch-checked {
+        visibility: visible;
+      }
+      & .switch-unchecked {
+        visibility: hidden;
+      }
+      &:after {
+        left: 17.5px;
+      }
+      &:before {
+        background-color: @light-green;
+      }
+    }
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    cursor: pointer;
+
+
+
+    & [class*="switch-"] {
+      font-size: 20px;
+      color: #777;
+      font-family: Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 0;
+      left: 50px;
+      line-height: 30px;
+    }
+
+    &:hover [class*="switch-"] {
+      color: #333;
+    }
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &:before {
+      width: 40px;
+      height: 25px;
+      background-color: @light-grey;
+      border-radius: 15px;
+    }
+
+    &:after {
+      top: 4.5px;
+      left: 1.5px;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background-color: @white;
+    }
+  }
+}
