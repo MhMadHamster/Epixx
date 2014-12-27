@@ -326,6 +326,7 @@ img {
   background-color: #fff;
   position: absolute;
   text-align: center;
+  padding: 0 20px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   -webkit-backface-visibility: hidden;
