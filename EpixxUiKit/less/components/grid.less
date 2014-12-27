@@ -3,9 +3,9 @@
 // @i — внутренний счетчик от 1 до @n
 // Собственно, генерация
 	.col-@{i} {
-		width: ((@i * (100% - (@n/@i * 2 - 2))) / @n);
+		width: ((@i * 100%) / @n);
 		float: left;
-		margin: 0 1%;
+		padding: 0 @column-horizontal-padding;
 	}
 
 // Рекурсовный самовызов с цвеличенным на 1 счетчиком
@@ -15,13 +15,13 @@
 // Вызываем примесь
 .generate-columns(12);
 
-[class*=col-]:first-of-type { margin-left: 0; }
-[class*=col-]:last-of-type { margin-right: 0; }
+[class*=col-]:first-of-type { margin-left: @column-horizontal-padding * (-1); }
+[class*=col-]:last-of-type { margin-right: @column-horizontal-padding * (-1); }
 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 30px;
+	padding-left: @column-horizontal-padding * 2; // центрирование с 18px паддингами между колонками
 	background-color: @bg-color;
 }
 
@@ -33,12 +33,16 @@
 	padding: 20px 0;
 }
 
-[class*=col-] *:first-child {
+[class*=col-] .row [class*=col-]:first-child:last-child .h1 {
+	margin-right: @column-horizontal-padding * (-1);
+}
+
+[class*=col-] .btn:first-of-type {
 	margin-left: 0;
 	padding-left: 0;
 }
 
-[class*=col-] *:last-child {
+[class*=col-] .btn:last-of-type {
 	margin-right: 0;
 	padding-right: 0;
 }

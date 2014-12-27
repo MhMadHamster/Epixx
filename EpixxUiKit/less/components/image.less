@@ -3,7 +3,7 @@ img {
   height: 100%;
 }
 
-.img {
+.thumbnail {
   position: relative;
   overflow: hidden;
   height: @img-height;
@@ -55,35 +55,41 @@ img {
     transition: all 0.3s;
   }
 
-  &-rotate {
-    vertical-align: middle;
-    line-height: 260px;
-    transition: all 1s;
-    position: relative;
+  & .thumbnail-container {
+    height: 100%;
     transform-style: preserve-3d;
+    transition: transform 1s;
+    position: relative;
 
     & img {
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
       position: absolute;
       z-index: 2;
+      border-radius: @img-border-radius;
     }
   }
 
-  &-rotate:after {
-    content: 'При наведении фотография разворачивается, и на другой стороне оказывается текст';
+  & .thumbnail-caption {
     .typograph(@color: @black; @font-size: 14px; @lh: 20px;);
-    display: inline-block;
+    display: table;
     width: 100%;
     height: 100%;
     background-color: #fff;
     position: absolute;
-    top: 0;
-    left: 0;
     text-align: center;
-    padding: 110px 25px;
     transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: @img-border-radius;
+
+    & > p {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
-  &-rotate:hover {
+  &-rotate:hover .thumbnail-container {
     transform: rotateY(180deg);
   }
 }

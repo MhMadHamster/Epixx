@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<link rel="stylesheet" href="css/select2.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
@@ -140,12 +141,12 @@
 					<a href="#" class="btn btn-green" onclick="return false;">Нажатие</a>
 				</div>
 				<!-- /.col-5 -->
-				<div class="col-4">
+				<div class="col-5">
 					<a href="#" class="btn btn-green btn-sm" onclick="return false;">Кнопка</a>
 					<a href="#" class="btn btn-green btn-sm" onclick="return false;">Наведение</a>
 					<a href="#" class="btn btn-green btn-sm" onclick="return false;">Нажатие</a>
 				</div>
-				<!-- /.col-4 -->
+				<!-- /.col-5 -->
 			</div>
 			<!-- /.row -->
 
@@ -156,12 +157,12 @@
 					<a href="#" class="btn btn-dark" onclick="return false;">Нажатие</a>
 				</div>
 				<!-- /.col-5 -->
-				<div class="col-4">
+				<div class="col-5">
 					<a href="#" class="btn btn-dark btn-sm" onclick="return false;">Кнопка</a>
 					<a href="#" class="btn btn-dark btn-sm" onclick="return false;">Наведение</a>
 					<a href="#" class="btn btn-dark btn-sm" onclick="return false;">Нажатие</a>
 				</div>
-				<!-- /.col-4 -->
+				<!-- /.col-5 -->
 			</div>
 			<!-- /.row -->
 
@@ -172,12 +173,12 @@
 					<a href="#" class="btn btn-org" onclick="return false;">Нажатие</a>
 				</div>
 				<!-- /.col-5 -->
-				<div class="col-4">
+				<div class="col-5">
 					<a href="#" class="btn btn-org btn-sm" onclick="return false;">Кнопка</a>
 					<a href="#" class="btn btn-org btn-sm" onclick="return false;">Наведение</a>
 					<a href="#" class="btn btn-org btn-sm" onclick="return false;">Нажатие</a>
 				</div>
-				<!-- /.col-4 -->
+				<!-- /.col-5 -->
 			</div>
 			<!-- /.row -->
 
@@ -198,30 +199,32 @@
 			<div class="row">
 
 				<div class="col-3">
-					<div class="img img-rounded">
+					<div class="thumbnail thumbnail-rounded">
 						<img src="img/temp01.jpg" alt="Don't Just Stand There">
 					</div>
 				</div>
 				<!-- /.col-3 -->
 
 				<div class="col-3">
-					<div class="img img-rounded img-scale">
+					<div class="thumbnail thumbnail-rounded thumbnail-scale">
 						<img src="img/temp01.jpg" alt="Don't Just Stand There">
 					</div>
 				</div>
 				<!-- /.col-3 -->
 
 				<div class="col-3">
-					<div class="img img-rounded img-popup">
+					<div class="thumbnail thumbnail-rounded thumbnail-popup">
 						<img src="img/temp01.jpg" alt="Don't Just Stand There">
 					</div>
 				</div>
 				<!-- /.col-3 -->
 
 				<div class="col-3">
-					<div class="img img-rounded img-rotate">
-						<img src="img/temp01.jpg" alt="Don't Just Stand There">
-						<div class="im-rotate">asdasdasdasda</div>
+					<div class="thumbnail thumbnail-rounded thumbnail-rotate">
+						<div class="thumbnail-container">
+							<div class="thumbnail-caption"><p>При наведении фотография разворачивается, и на другой стороне оказывается текст</p></div>
+							<img src="img/temp01.jpg" alt="Don't Just Stand There">
+						</div>
 					</div>
 				</div>
 				<!-- /.col-3 -->
@@ -231,8 +234,77 @@
 		</div>
 		<!-- / Images -->
 
+
+		<!-- Forms -->
+		<div class="forms">
+
+			<div class="row">
+				<div class="col-12">
+					<div class="h1 h1-lined">Формы</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-4">
+					<div class="form-input-text">
+						<form>
+							<input type="text" class="input-text input-text-disable" placeholder="Placeholder">
+							<input type="text" class="input-text" value="Some text">
+							<div class="icon"><input type="text" class="input-text"></div>
+							<div class="icon"><input type="text" class="input-text"></div>
+						</form>
+					</div>
+				</div>
+				
+				<div class="col-4">
+
+					<div class="row">
+						<div class="col-12">
+							<div class="form-tags">
+								<form>
+									<select name="select2" id="select2" class="select2" multiple>
+										<option value="First" selected="true">First</option>
+										<option value="Second">Second</option>
+										<option value="Third">Third</option>
+										<option value="Fourth">Fourth</option>
+										<option value="Fifth">Fifth</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12">
+							<div class="form-select">
+								<form>
+									<select data-placeholder="Select shit" name="select1" id="select1" class="chosen-select">
+										<option value="First">First</option>
+										<option value="Second">Second</option>
+										<option value="Third">Third</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<!-- /.row -->
+
+		</div>
+		<!-- / forms -->
+
+
+
 	</div>
 	<!-- /.container -->
 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
