@@ -15,13 +15,14 @@
 // Вызываем примесь
 .generate-columns(12);
 
-[class*=col-]:first-of-type { margin-left: @column-horizontal-padding * (-1); }
-[class*=col-]:last-of-type { margin-right: @column-horizontal-padding * (-1); }
+// [class*=col-]:first-of-type { margin-left: @column-horizontal-padding * (-1); }
+// [class*=col-]:last-of-type { margin-right: @column-horizontal-padding * (-1); }
 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding-left: @column-horizontal-padding * 2; // центрирование с 18px паддингами между колонками
+	padding-left: @column-horizontal-padding; // центрирование с 18px паддингами между колонками
+	padding-right: @column-horizontal-padding;
 	background-color: @bg-color;
 }
 
@@ -36,6 +37,17 @@
 [class*=col-] .row [class*=col-]:first-child:last-child .h1 {
 	margin-right: @column-horizontal-padding * (-1);
 }
+
+[class*=col-] .row [class*=col-]:first-child:last-child {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+[class*=col-] .row (([class*=col-]:not:first-child):not):last-child {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 
 [class*=col-] .btn:first-of-type {
 	margin-left: 0;

@@ -70,16 +70,11 @@
   float: left;
   padding: 0 18px;
 }
-[class*=col-]:first-of-type {
-  margin-left: -18px;
-}
-[class*=col-]:last-of-type {
-  margin-right: -18px;
-}
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 36px;
+  padding-left: 18px;
+  padding-right: 18px;
   background-color: #f0f2f5;
 }
 .row {
@@ -90,6 +85,14 @@
 }
 [class*=col-] .row [class*=col-]:first-child:last-child .h1 {
   margin-right: -18px;
+}
+[class*=col-] .row [class*=col-]:first-child:last-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+[class*=col-] .row (([class*=col-]:not:first-child):not):last-child {
+  margin-left: 0;
+  margin-right: 0;
 }
 [class*=col-] .btn:first-of-type {
   margin-left: 0;
@@ -435,6 +438,10 @@ img {
 .icon-wrong:before {
   content: '\e801';
 }
+/* '' */
+.icon-dot:before {
+  content: '\e802';
+}
 .form-tags {
   background-color: #ffffff;
   border-radius: 5px;
@@ -505,4 +512,157 @@ img {
   padding: 30px;
   padding-bottom: 100px;
   position: relative;
+}
+.form-check {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 0;
+  position: relative;
+}
+.form-check .form-radio {
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  color: #555555;
+  padding: 0 0;
+  margin: 0 0;
+  font-weight: normal;
+  line-height: auto;
+}
+.form-check .form-radio label {
+  display: block;
+  padding: 5px 0;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.form-check .form-radio label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #c6c6c6;
+}
+.form-check .form-radio .radio {
+  display: none;
+}
+.form-check .form-radio .radio:checked + label:after {
+  font-family: "input-text-icons";
+  content: '\e802';
+  font-size: 23px;
+  border: none;
+  color: #fc6e51;
+  top: 2px;
+}
+.form-check .form-radio .radio[disabled="true"] + label {
+  color: #eaeaea;
+}
+.form-check .form-radio .radio[disabled="true"] + label:after {
+  border: 1px solid #eaeaea;
+}
+.form-check .form-checkbox {
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  color: #555555;
+  padding: 0 0;
+  margin: 0 0;
+  font-weight: normal;
+  line-height: auto;
+}
+.form-check .form-checkbox label {
+  display: block;
+  padding: 5px 0;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.form-check .form-checkbox label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #c6c6c6;
+}
+.form-check .form-checkbox .checkbox {
+  display: none;
+}
+.form-check .form-checkbox .checkbox:checked + label:after {
+  font-family: "input-text-icons";
+  content: '\e800';
+  font-size: 14px;
+  border: 2px solid #fc6e51;
+  color: #fc6e51;
+  text-align: center;
+  top: 5px;
+}
+.form-check .form-checkbox .checkbox[disabled="true"] + label {
+  color: #eaeaea;
+}
+.form-check .form-checkbox .checkbox[disabled="true"] + label:after {
+  border: 1px solid #eaeaea;
+}
+.form-check .form-switch {
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  color: #555555;
+  padding: 0 0;
+  margin: 0 0;
+  font-weight: normal;
+  line-height: auto;
+}
+.form-check .form-switch label {
+  display: block;
+  padding: 5px 0;
+  padding-left: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.form-check .form-switch label:after,
+.form-check .form-switch label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 10px;
+  transition: all .3s;
+}
+.form-check .form-switch label:after {
+  width: 32px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+.form-check .form-switch label:before {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 50%;
+  top: 9px;
+  left: 11px;
+}
+.form-check .form-switch .switch {
+  display: none;
+}
+.form-check .form-switch .switch:checked + label:after {
+  background-color: #addf7a;
+}
+.form-check .form-switch .switch:checked + label:before {
+  left: 27px;
+}
+.form-check .form-switch .switch[disabled="true"] + label {
+  color: #eaeaea;
+}
+.form-check .form-switch .switch[disabled="true"] + label:after {
+  background-color: #f8f8f8;
 }

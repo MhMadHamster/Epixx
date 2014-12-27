@@ -23,4 +23,25 @@ $(document).ready(function() {
     };
   });
 
+  $(".radio").on("change", function(){
+    $(".radio:enabled").next().text("Активно");
+    $(this).next().text("Отмечено");
+  });
+
+  $(".checkbox").on("change", function(){
+    if($(this).prop("checked")){
+      $(this).next().text("Отмечено");
+    } else {
+      $(this).next().text("Активно");
+    }
+  });
+
+  $(".switch").on("change", function(){
+    if($(this).prop("checked")){
+      $(this).next().text("Включено");
+    } else {
+      $(this).next().text("Выключено");
+    }
+  });
+
 });
