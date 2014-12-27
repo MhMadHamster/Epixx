@@ -4,6 +4,26 @@ $(document).ready(function() {
 
   $(".input-text-disable").prop("readonly", true);
 
+  $("#owl-demo").owlCarousel({
+
+    navigation : true, // Show next and prev buttons
+    navigationText: [
+     "<i class='icon-left'></i>",
+     "<i class='icon-right'></i>"
+      ],
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1, 
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+ 
+  });
+
   $("input.input-text").on("change", function(){
     if ($(this).val() === "wrong") {
       $(this)
